@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Input from './elements/Input';
-import InputGroup from './elements/InputGroup';
-import Button from './elements/Button';
-import Alert from './elements/Alert';
-import Showable from './elements/Showable';
-import { findUser } from '../helpers/userHelper';
+import React, { Component } from "react";
+import Input from "./elements/Input";
+import InputGroup from "./elements/InputGroup";
+import Button from "./elements/Button";
+import Alert from "./elements/Alert";
+import Showable from "./elements/Showable";
+import { findUser } from "../helpers/userHelper";
 
 class UserForm extends Component {
   constructor(props) {
@@ -62,7 +62,7 @@ class UserForm extends Component {
         <InputGroup name="avatar" labelText="Photo Link">
           <Input name="avatar" value={avatar} onChange={this.onChangeInput} />
         </InputGroup>
-        <Button type="submit" color="primary">{header} User</Button>
+        <Button type="submit" color="primary">{header}</Button>
       </form>
     );
   }

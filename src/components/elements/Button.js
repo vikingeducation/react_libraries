@@ -1,30 +1,48 @@
-import React from 'react';
-import ButtonBootstrap from './ButtonBootstrap';
+import React from "react";
+import { Button } from "reactstrap";
 
-const Button = props => {
-  const { size, color, children, type, onClick, name } = props;
-  const sizeClass = size ? `btn-${size}` : '';
+export default class ButtonReact extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button
+          style={{ width: "120px", margin: "auto", display: "block" }}
+          type={this.props.type}
+          name={this.props.name}
+          color={this.props.color}
+          onClick={this.props.onClick}
+        >
+          {this.props.children}
+        </Button>
+      </div>
+    );
+  }
+}
 
-  return (
-    <ButtonBootstrap name={name} type={type} onClick={onClick}>
-      {children}
-    </ButtonBootstrap>
-  );
+// const Button = props => {
+//   const { size, color, children, type, onClick, name } = props;
+//   const sizeClass = size ? `btn-${size}` : '';
 
-  // <button
-  //   name={name}
-  //   type={type}
-  //   onClick={onClick}
-  //   className={`btn btn-${color} ${sizeClass}`}
-  // >
-  //   {children}
-  // </button>
-};
+//   return (
+//     <ButtonBootstrap name={name} type={type} onClick={onClick}>
+//       {children}
+//     </ButtonBootstrap>
+//   );
 
-Button.defaultProps = {
-  type: 'button',
-  color: 'default',
-  children: 'Submit'
-};
+// <button
+//   name={name}
+//   type={type}
+//   onClick={onClick}
+//   className={`btn btn-${color} ${sizeClass}`}
+// >
+//   {children}
+// </button>
+// };
 
-export default Button;
+// Button.defaultProps = {
+//   type: 'button',
+//   color: 'default',
+//   children: 'Submit'
+// };
+
+// export default Button;

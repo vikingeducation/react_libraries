@@ -1,19 +1,24 @@
 import React from 'react';
+import ButtonBootstrap from './ButtonBootstrap';
 
 const Button = props => {
   const { size, color, children, type, onClick, name } = props;
   const sizeClass = size ? `btn-${size}` : '';
 
   return (
-    <button
-      name={name}
-      type={type}
-      onClick={onClick}
-      className={`btn btn-${color} ${sizeClass}`}
-    >
+    <ButtonBootstrap name={name} type={type} onClick={onClick}>
       {children}
-    </button>
+    </ButtonBootstrap>
   );
+
+  // <button
+  //   name={name}
+  //   type={type}
+  //   onClick={onClick}
+  //   className={`btn btn-${color} ${sizeClass}`}
+  // >
+  //   {children}
+  // </button>
 };
 
 Button.defaultProps = {

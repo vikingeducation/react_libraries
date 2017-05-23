@@ -1,7 +1,8 @@
 import React from 'react';
-import JumbotronFluid from './elements/JumbotronFluid';
+import JumbotronFluid from './JumbotronFluid';
 import UserList from './UserList';
 import UserForm from './UserForm';
+import Navbar from './Navbar';
 
 const App = (
   {
@@ -16,6 +17,7 @@ const App = (
   }
 ) => (
   <div className="App">
+    <Navbar />
     <JumbotronFluid
       heading="User CRUD"
       lead="Using an API for User CRUD operations in React Applications"

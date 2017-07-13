@@ -1,20 +1,13 @@
 import React from "react";
-
-const HeaderBrand = () => {
-  return (
-    <div className="navbar-header">
-      <a className="navbar-brand" href="/">React Photo Gallery</a>
-    </div>
-  );
-};
+import Toolbar from 'react-md/lib/Toolbars';
+import Button from 'react-md/lib/Buttons/Button';
 
 const Header = () => {
   return (
-    <nav className="Header navbar bg-primary">
-      <div className="container-fluid">
-        <HeaderBrand />
-      </div>
-    </nav>
+    <Toolbar
+      colored
+      title="React Photo Gallery"
+    />
   );
 };
 

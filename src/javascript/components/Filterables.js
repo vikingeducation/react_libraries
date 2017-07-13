@@ -5,6 +5,7 @@ import SearchTerm from "./SearchTerm";
 
 const Filterables = ({
   onChangeInput,
+  onChangeSearch,
   onDateClick,
   dateSortDirection,
   searchTerm
@@ -15,7 +16,7 @@ const Filterables = ({
       <IgFilters onChangeInput={onChangeInput} />
     </div>
     <div className="col-md-3">
-      <SearchTerm onChangeInput={onChangeInput} searchTerm={searchTerm} />
+      <SearchTerm onChangeInput={onChangeSearch} searchTerm={searchTerm} />
     </div>
     <div className="col-md-3">
       <DateSorter

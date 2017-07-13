@@ -17,8 +17,15 @@ class FilterableGallery extends Component {
   }
 
   onChangeInput = e => {
+    console.log(e);
     this.setState({
       [e.target.name]: e.target.value
+    });
+  };
+
+  onChangeSearch = value => {
+    this.setState({
+      searchTerm: value
     });
   };
 
@@ -66,6 +73,7 @@ class FilterableGallery extends Component {
         </div>
         <Filterables
           onChangeInput={this.onChangeInput}
+          onChangeSearch={this.onChangeSearch}
           onDateClick={this.onDateClick}
           dateSortDirection={this.state.dateSortDirection}
           searchTerm={this.state.searchTerm}

@@ -41,7 +41,7 @@ const Photo = props => {
           <PhotoDetail label="Tags" data={parsedTags} />
           <PhotoDetail label="Caption" data={parsedCaption} />
         </Paper>
-      </div>
+        </div>
     </div>
   );
 };

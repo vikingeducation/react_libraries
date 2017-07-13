@@ -2,6 +2,7 @@ import React from "react";
 import { getFilters } from "../helpers";
 import Select from "./elements/Select";
 
+
 const IgFilters = ({ onChangeInput }) => {
   const filters = getFilters();
   return (

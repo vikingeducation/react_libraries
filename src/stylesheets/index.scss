@@ -1,26 +1,11 @@
 @import '~react-md/src/scss/react-md';
-// body {
-//   margin: 0;
-//   padding: 0 0 200px 0;
-//   font-family: sans-serif;
-// }
+body {
+  margin: 0;
+  padding: 0 0 200px 0;
+}
 
-// .navbar * {
-//   color: white;
-// }
-
-// .navbar {
-//   border-radius: 0px;
-// }
-
-// img {
-//   border: solid 1px black;
-//   margin-bottom: 1.5em;
-// }
-
-// div.photos {
-//   min-height: 650px;
-// }
+$md-primary-color: $md-teal-500;
+$md-secondary-color: $md-lime-a-400;
 
 .md-paper {
   padding: 1em;

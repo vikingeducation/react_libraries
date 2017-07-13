@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0 0 200px 0;
+  font-family: sans-serif;
+}
+
+.navbar * {
+  color: white;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+img {
+  border: solid 1px black;
+  margin-bottom: 1.5em;
+}
+
+div.photos {
+  min-height: 650px;
+}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import FilterableGallery from "./FilterableGallery";
-import "../App.css";
 
 class App extends Component {
   render() {

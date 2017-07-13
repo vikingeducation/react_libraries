@@ -23,8 +23,7 @@ const Photo = props => {
   const parsedTags = tagParser(tags);
   const parsedCaption = parseCaption(caption);
   return (
-    <div className="col-md-4">
-      <div className="col-md-12 photos">
+    <div className="md-cell--4">
         <Paper>
           <a href={photoUrl}>
             <img className="img-responsive" src={src} alt="" />
@@ -41,7 +40,6 @@ const Photo = props => {
           <PhotoDetail label="Tags" data={parsedTags} />
           <PhotoDetail label="Caption" data={parsedCaption} />
         </Paper>
-        </div>
     </div>
   );
 };

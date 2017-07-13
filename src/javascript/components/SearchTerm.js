@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./elements/Input";
 import TextField from 'react-md/lib/TextFields';
 
 const SearchTerm = ({ onChangeInput, searchTerm }) => {

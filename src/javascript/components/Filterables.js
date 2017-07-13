@@ -10,15 +10,15 @@ const Filterables = ({
   dateSortDirection,
   searchTerm
 }) =>
-  <div className="row well">
-    <h3>Sort Your Results</h3>
-    <div className="col-md-3">
+  <div className="md-grid">
+    <div className="md-cell--4">
+      <h3>Sort Your Results</h3>
       <IgFilters onChangeInput={onChangeFilter} />
     </div>
-    <div className="col-md-3">
+    <div className="md-cell--4">
       <SearchTerm onChangeInput={onChangeSearch} searchTerm={searchTerm} />
     </div>
-    <div className="col-md-3">
+    <div className="md-cell--4">
       <DateSorter
         onDateClick={onDateClick}
         dateSortDirection={dateSortDirection}

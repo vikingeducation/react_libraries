@@ -3,6 +3,7 @@ import Filterables from "./Filterables";
 import Gallery from "./Gallery";
 import Pagination from "./Pagination";
 import DATA from "../photos";
+import Paper from 'react-md/lib/Papers';
 
 class FilterableGallery extends Component {
   constructor(props) {
@@ -66,31 +67,37 @@ class FilterableGallery extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <h1>React Photo Gallery</h1>
+      <div>
+
+        <div className="md-grid">
+          <Paper>
+            <h1>React Photo Gallery</h1>
+            <Filterables
+              onChangeFilter={this.onChangeFilter}
+              onChangeSearch={this.onChangeSearch}
+              onDateClick={this.onDateClick}
+              dateSortDirection={this.state.dateSortDirection}
+              searchTerm={this.state.searchTerm}
+              className="md-cell--12"
+            />
+          </Paper>
         </div>
-        <Filterables
-          onChangeFilter={this.onChangeFilter}
-          onChangeSearch={this.onChangeSearch}
-          onDateClick={this.onDateClick}
-          dateSortDirection={this.state.dateSortDirection}
-          searchTerm={this.state.searchTerm}
-        />
-        <Gallery
-          photos={DATA}
-          igFilter={this.state.igFilter}
-          onSortableClick={this.onSortableClick}
-          dateSortDirection={this.state.dateSortDirection}
-          searchTerm={this.state.searchTerm}
-          page={this.state.page}
-          category={this.state.category}
-        />
-        <Pagination
-          onIncrement={this.onIncrement}
-          onDecrement={this.onDecrement}
-          page={this.state.page}
-        />
+        <div>
+          <Gallery
+            photos={DATA}
+            igFilter={this.state.igFilter}
+            onSortableClick={this.onSortableClick}
+            dateSortDirection={this.state.dateSortDirection}
+            searchTerm={this.state.searchTerm}
+            page={this.state.page}
+            category={this.state.category}
+          />
+          <Pagination
+            onIncrement={this.onIncrement}
+            onDecrement={this.onDecrement}
+            page={this.state.page}
+          />
+        </div>
       </div>
     );
   }

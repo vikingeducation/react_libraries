@@ -52,9 +52,11 @@ class Gallery extends Component {
       );
     });
     return (
-      <div className="row">
-        <h4>Results: {resultsCount}</h4>
-        {photoElements}
+      <div className="md-grid">
+        <h3>Results: {resultsCount}</h3>
+        <div className="md-grid">
+          {photoElements}
+        </div>
       </div>
     );
   }

@@ -16,10 +16,9 @@ class FilterableGallery extends Component {
     };
   }
 
-  onChangeInput = e => {
-    console.log(e);
+  onChangeFilter = filter => {
     this.setState({
-      [e.target.name]: e.target.value
+      igFilter: filter
     });
   };
 
@@ -72,7 +71,7 @@ class FilterableGallery extends Component {
           <h1>React Photo Gallery</h1>
         </div>
         <Filterables
-          onChangeInput={this.onChangeInput}
+          onChangeFilter={this.onChangeFilter}
           onChangeSearch={this.onChangeSearch}
           onDateClick={this.onDateClick}
           dateSortDirection={this.state.dateSortDirection}

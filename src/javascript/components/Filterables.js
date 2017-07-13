@@ -4,7 +4,7 @@ import DateSorter from "./DateSorter";
 import SearchTerm from "./SearchTerm";
 
 const Filterables = ({
-  onChangeInput,
+  onChangeFilter,
   onChangeSearch,
   onDateClick,
   dateSortDirection,
@@ -13,7 +13,7 @@ const Filterables = ({
   <div className="row well">
     <h3>Sort Your Results</h3>
     <div className="col-md-3">
-      <IgFilters onChangeInput={onChangeInput} />
+      <IgFilters onChangeInput={onChangeFilter} />
     </div>
     <div className="col-md-3">
       <SearchTerm onChangeInput={onChangeSearch} searchTerm={searchTerm} />

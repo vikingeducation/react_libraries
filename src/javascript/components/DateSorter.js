@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import Button from 'react-md/lib/Buttons/Button';
 
 class DateSorter extends Component {
   render() {
     return (
-      <button className="btn btn-success" onClick={this.props.onDateClick}>
-        Sort By Date {this.props.dateSortDirection}
-      </button>
+      <Button 
+        raised
+        primary 
+        onClick={this.props.onDateClick} 
+        label={`Sort By Date ${this.props.dateSortDirection}`} 
+      />
     );
   }
 }

@@ -1,0 +1,25 @@
+@import '~react-md/src/scss/react-md';
+body {
+  margin: 0;
+  padding: 0 0 200px 0;
+}
+
+$md-primary-color: $md-teal-500;
+$md-secondary-color: $md-lime-a-400;
+
+.md-paper {
+  padding: 1em;
+}
+.md-grid {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 65vw;
+  max-width: 75vw;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200px;
+}
+@include react-md-everything;

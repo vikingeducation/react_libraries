@@ -84,12 +84,8 @@ ul {
 }
 
 .search-box {
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
   font-size: 18px;
-  display: block;
-  margin: auto;
+  text-align: center;
   margin-bottom: 20px;
 }
 

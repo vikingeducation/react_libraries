@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getApiData } from "../actions";
 import Peoples from "../components/Peoples/Peoples";
 import { withRouter } from "react-router-dom";
+import Tiles from "../components/elements/Tiles";
 
 class PeoplesContainer extends Component {
   componentDidMount() {
@@ -18,7 +19,11 @@ class PeoplesContainer extends Component {
   render() {
     const { infoData, isFetching } = this.props;
 
-    return <Peoples peopleData={infoData} isFetching={isFetching} />;
+    return (
+      <Tiles>
+        <Peoples peopleData={infoData} isFetching={isFetching} />
+      </Tiles>
+    );
   }
 }
 

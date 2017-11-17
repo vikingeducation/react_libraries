@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Tile from "../elements/Tile";
 
 const Planets = ({ planetsData, isFetching }) => {
   if (isFetching) {
@@ -10,11 +11,9 @@ const Planets = ({ planetsData, isFetching }) => {
     //map styling
     return planetsData.results.map(planet => {
       return (
-        <div className="planet card" key={planet.name}>
-          <Link to={planet.url.substring(20)}>
-            <h3>{planet.name}</h3>
-          </Link>
-        </div>
+        <Link to={planet.url.substring(20)} key={planet.name}>
+          <Tile heading={planet.name} />
+        </Link>
       );
     });
   } else {

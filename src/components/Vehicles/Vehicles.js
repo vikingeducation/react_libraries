@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Tile from "../elements/Tile";
 
 const Vehicles = ({ vehiclesData, isFetching }) => {
   if (isFetching) {
@@ -10,11 +11,9 @@ const Vehicles = ({ vehiclesData, isFetching }) => {
     //map styling
     return vehiclesData.results.map((vehicle, index) => {
       return (
-        <div className="vehicle card" key={vehicle.name}>
-          <Link to={vehicle.url.substring(20)}>
-            <h3>{vehicle.name}</h3>
-          </Link>
-        </div>
+        <Link to={vehicle.url.substring(20)} key={vehicle.name}>
+          <Tile heading={vehicle.name} />
+        </Link>
       );
     });
   } else {

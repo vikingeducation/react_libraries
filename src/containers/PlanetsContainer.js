@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getApiData } from "../actions";
 import Planets from "../components/Planets/Planets";
+import Tiles from "../components/elements/Tiles";
 
 class PlanetsContainer extends Component {
   componentDidMount() {
@@ -17,7 +18,11 @@ class PlanetsContainer extends Component {
   render() {
     const { infoData, isFetching } = this.props;
 
-    return <Planets planetsData={infoData} isFetching={isFetching} />;
+    return (
+      <Tiles>
+        <Planets planetsData={infoData} isFetching={isFetching} />
+      </Tiles>
+    );
   }
 }
 

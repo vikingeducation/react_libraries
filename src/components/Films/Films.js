@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Tile from "../elements/Tile";
 
 const Films = ({ filmData, isFetching }) => {
   if (isFetching) {
@@ -15,17 +16,23 @@ const Films = ({ filmData, isFetching }) => {
     //map styling
     return sortedFilms.results.map(film => {
       return (
-        <div className="film card" key={film.episode_id}>
-          <Link to={film.url.substring(20)}>
-            <h3>
-              {film.title} Episode {film.episode_id}
-            </h3>
-          </Link>
-          <small>{film.release_date}</small>
-          <small>Director: {film.director}</small>
-          <small>Producer: {film.producer}</small>
-          <p>{film.opening_crawl}</p>
-        </div>
+        <Link to={film.url.substring(20)} key={film.episode_id}>
+          <Tile
+            heading={film.title + " Episode " + film.episode_id}
+            text={
+              <span>
+                <small>{film.release_date} </small>
+                <small>
+                  <b>Director:</b> {film.director}{" "}
+                </small>
+                <small>
+                  <b>Producer:</b> {film.producer}{" "}
+                </small>
+                <p>{film.opening_crawl}</p>
+              </span>
+            }
+          />
+        </Link>
       );
     });
   } else {

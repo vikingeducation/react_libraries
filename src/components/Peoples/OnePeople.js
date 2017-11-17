@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import Button from "../elements/Button";
 
 const personLinks = data => {
   return data.map((single, index) => {
     return (
-      <span key={single}>
-        <Link to={single.substring(20)}>
-          <button className="btn-sm btn">{index + 1}</button>
-        </Link>{" "}
-      </span>
+      <Button key={single} path={single.substring(20)} label={index + 1} />
     );
   });
 };
@@ -37,9 +34,7 @@ const Peoples = ({ peopleData, isFetching }) => {
         {peopleData.homeworld ? (
           <p>
             Homeworld:{" "}
-            <Link to={peopleData.homeworld.substring(20)}>
-              <button className="btn-sm btn">1</button>
-            </Link>
+            <Button path={peopleData.homeworld.substring(20)} label={"1"} />
           </p>
         ) : (
           <div />

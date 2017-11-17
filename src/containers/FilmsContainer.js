@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import { Link } from "react-router-dom";
 import { getApiData } from "../actions";
 import Films from "../components/Films/Films";
+import Tiles from "../components/elements/Tiles";
 
 class FilmsContainer extends Component {
   componentDidMount() {
@@ -18,7 +19,11 @@ class FilmsContainer extends Component {
   render() {
     const { infoData, isFetching } = this.props;
 
-    return <Films filmData={infoData} isFetching={isFetching} />;
+    return (
+      <Tiles>
+        <Films filmData={infoData} isFetching={isFetching} />
+      </Tiles>
+    );
   }
 }
 

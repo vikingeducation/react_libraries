@@ -59,8 +59,10 @@ class App extends Component {
       <Router>
         <div className="container-fluid">
           <div className="row">
-            <Route component={NavContainer} />
-            <div className="col-sm-9">
+            <div className="col-3">
+              <Route component={NavContainer} />
+            </div>
+            <div className="col-9" id="content">
               <header className="App-header">
                 <h2>Star Wars-pedia</h2>
                 <small>

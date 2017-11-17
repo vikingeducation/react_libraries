@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Tile from "../elements/Tile";
 
 const Species = ({ speciesData, isFetching }) => {
   if (isFetching) {
@@ -10,11 +11,9 @@ const Species = ({ speciesData, isFetching }) => {
     //map styling
     return speciesData.results.map(specie => {
       return (
-        <div className="people card" key={specie.name}>
-          <Link to={specie.url.substring(20)}>
-            <h3>{specie.name}</h3>
-          </Link>
-        </div>
+        <Link to={specie.url.substring(20)} key={specie.name}>
+          <Tile heading={specie.name} />
+        </Link>
       );
     });
   } else {

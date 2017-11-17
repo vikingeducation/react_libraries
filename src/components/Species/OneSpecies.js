@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import Button from "../elements/Button";
 
 const specieLinks = data => {
   return data.map((single, index) => {
     return (
-      <span key={single}>
-        <Link to={single.substring(20)}>
-          <button className="btn-sm btn">{index + 1}</button>
-        </Link>{" "}
-      </span>
+      <Button key={single} path={single.substring(20)} label={index + 1} />
     );
   });
 };
@@ -31,9 +28,7 @@ const Specie = ({ specieData, isFetching }) => {
         <p>Skin Colors: {specieData.skin_colors}</p>
         <p>
           Homeworld:{" "}
-          <Link to={specieData.homeworld.substring(20)}>
-            <button className="btn-sm btn">1</button>
-          </Link>
+          <Button path={specieData.homeworld.substring(20)} label={"1"} />
         </p>
         <p>Languages: {specieData.language}</p>
         <p>Films: {specieLinks(specieData.films)}</p>

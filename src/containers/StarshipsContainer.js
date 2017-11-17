@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getApiData } from "../actions";
 import Starships from "../components/Starships/Starships";
+import Tiles from "../components/elements/Tiles";
 
 class StarshipsContainer extends Component {
   componentDidMount() {
@@ -17,7 +18,11 @@ class StarshipsContainer extends Component {
   render() {
     const { infoData, isFetching } = this.props;
 
-    return <Starships starshipsData={infoData} isFetching={isFetching} />;
+    return (
+      <Tiles>
+        <Starships starshipsData={infoData} isFetching={isFetching} />
+      </Tiles>
+    );
   }
 }
 
